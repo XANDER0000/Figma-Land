@@ -1,0 +1,150 @@
+// main: ../style.less
+.about {
+    position: relative;
+    margin-top: 70px;
+}
+
+.about__vector1 {
+    position: absolute;
+    right: 0;
+    top: -60px;
+    z-index: 0;
+
+    @media @mobile {
+        width: 220px;
+    }
+}
+
+.about__vector2 {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    z-index: 0;
+
+    @media @tablet {
+        left: -200px;
+    }
+}
+
+.content {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    @media @mobile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media @mobile-sm {
+        display: none;
+    }
+}
+
+.content1, .content2 {
+    display: none;
+    @media @mobile-sm {
+        z-index: 1000;
+        display: block;
+        text-align: center;
+    }
+}
+
+.content1 {
+    @media @mobile-sm {
+        margin-bottom: 50px;
+    }
+}
+
+.about__content {
+    width: 460px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+.about__col {
+    z-index: 1000;
+}
+
+.about__title {
+    font-family: book;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: .1px;
+
+    color: @black;
+    margin-bottom: 17px;
+    z-index: 1000;
+}
+
+.about__text {
+    font-family: book;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: .2px;
+
+    color: @gray;
+    margin-bottom: 17px;
+    z-index: 1000;
+
+    @media @mobile-supersm {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+.about__link {
+    position: relative;
+    font-family: book;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .2px;
+
+    color: @blue-light;
+    text-decoration: none;
+    transition: all .2s ease-in;
+    z-index: 1000;
+
+    &:active {
+        color: #065c79;
+    }
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 1.5px;
+
+        background-color: @blue-light;
+
+        position: absolute;
+
+        left: 0;
+        bottom: -3px;
+        z-index: 1;
+
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    &:hover{
+        &:after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    }
+}
+
+.about__img {
+    filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+    width: 100%;
+    height: auto;
+}

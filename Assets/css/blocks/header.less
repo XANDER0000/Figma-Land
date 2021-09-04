@@ -1,0 +1,165 @@
+// main: ../style.less
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+
+    background-color: rgba(@white, .3);
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+
+    @media @mobile {
+        height: 60px;
+    }
+}
+
+.header__logo {
+    cursor: pointer;
+}
+
+.header__logo__img {
+    @media @mobile-sm {
+        width: 165px;
+    }
+
+    @media (max-width: 370px) {
+        width: 145px;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    @media @mobile {
+        display: none;
+
+        height: auto;
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+
+        background-color: rgba(@white, .6);
+        text-align: center;
+        box-shadow: 0 5px 10px #878686;
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    @media @mobile-sm {
+        flex-direction: column;
+    }
+}
+
+.nav__link {
+    padding: 10px 11px 10px 10px;
+    margin-right: 30px;
+
+    text-decoration: none;
+    color: @black;
+    font-family: book;
+    font-size: 18px;
+    line-height: 20px;
+
+    position: relative;
+
+
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    &:before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+      &:hover:before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      &:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        inset: 0 0 0 0;
+        background-color: @blue-light;
+        border: 1px solid @blue-light;
+        border-radius: 7px;
+        z-index: -1;
+        transition: transform .3s ease;
+      }
+
+      @media @tablet {
+        width: 100%;
+        margin: 0;
+        padding: .5rem 1rem;
+    }
+}
+
+.burger {
+    text-decoration: none;
+    background: none;
+    display: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    @media @mobile {
+        display: block;
+    }
+}
+
+.header__body .btn {
+    @media @mobile {
+        padding: 13px 30px;
+        min-width: 140px;
+
+        font-size: 18px;
+    }
+
+    @media @mobile-sm {
+        font-size: 14px;
+        min-width: 130px;
+
+        padding: 6px 25px;
+    }
+
+    @media (max-width: 370px) {
+        display: none;
+    }
+}
+
+.nav .btn {
+    display: none;
+
+    @media @mobile-sm {
+        font-size: 14px;
+        min-width: 130px;
+
+        padding: 6px 25px;
+    }
+
+    @media (max-width: 370px) {
+        display: flex;
+    }
+}

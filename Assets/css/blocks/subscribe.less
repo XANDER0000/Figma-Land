@@ -1,0 +1,112 @@
+// main: ../style.less
+
+.subscribe {
+    margin: 90px 0 120px 0;
+}
+
+
+.subscribe__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &.animation .progress__barblue {
+        width: 50%;
+    }
+}
+
+.subscribe__title {
+    font-family: bold;
+    text-align: center;
+    font-size: 56px;
+    line-height: 65px;
+    letter-spacing: .2px;
+    color: @black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 17px;
+
+
+
+    @media @mobile-sm {
+        display: none;
+    }
+
+    &--2 {
+        display: none;
+
+        @media @mobile-sm {
+            display: block;
+        }
+    }
+}
+
+.subscribe__subtitle {
+    text-align: center;
+    font-family: book;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: .2px;
+    color: @gray;
+    padding-bottom: 62px;
+
+    @media @mobile-sm {
+        display: none;
+    }
+
+    &--2 {
+        display: none;
+
+        @media @mobile-sm {
+            display: block;
+            padding-bottom: 42px;
+        }
+    }
+}
+
+.progress {
+    position: relative;
+    width: 100%;
+    max-width: 757px;
+    margin: 0 auto;
+    margin: 30px 0 40px;
+}
+
+.progress__bar {
+    height: 15px;
+    border-radius: 9.5px;
+    background-color: #e3eeff;
+}
+
+.progress__barblue {
+    height: 15px;
+    background-color: @blue-light;
+    height: 15px;
+    border-radius: 9.5px;
+
+    transition: .74s linear;
+    width: 0;
+}
+
+.progress__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress__counter{
+    font-family: roboto;
+    font-size: 14px;
+    line-height: 24px;
+    color: @gray;
+
+    margin-top: 7px;
+}
+
+.progress__name {
+    font-family: roboto;
+    font-size: 14px;
+    line-height: 24px;
+    color: @gray;
+
+    margin-top: 7px;
+}

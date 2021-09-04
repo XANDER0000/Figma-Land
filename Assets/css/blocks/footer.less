@@ -1,0 +1,61 @@
+// main: ../style.less
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+
+    @media @mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer__brand {
+    cursor: pointer;
+    @media @mobile {
+        margin-bottom: 30px;
+    }
+}
+
+.brand__subtitle {
+    font-family: book;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: .1px;
+
+    color: @gray
+}
+
+.footer__navigation {
+    @media @mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+}
+
+.social__logo {
+    text-decoration: none;
+    margin-right: 29px;
+
+    transition: all .1s ease-in;
+
+    &:hover {
+        transform: translateY(5px);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

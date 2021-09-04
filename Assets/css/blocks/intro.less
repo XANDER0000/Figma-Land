@@ -1,0 +1,194 @@
+// main: ../style.less
+
+.intro {
+    width: 100%;
+    overflow: none;
+
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.22) -3.38%, rgba(0, 225, 198, 0.32) 34%, #FFFFFF 98.92%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.22) -3.38%, rgba(0, 225, 198, 0.32) 34%, #FFFFFF 98.92%);
+    background: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0.22) -3.38%, rgba(0, 225, 198, 0.32) 34%, #FFFFFF 98.92%);
+    background: -o-linear-gradient(90deg, rgba(255, 255, 255, 0.22) -3.38%, rgba(0, 225, 198, 0.32) 34%, #FFFFFF 98.92%);
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: none;
+    padding-bottom: 20px;
+
+    @media @mobile-supersm {
+        padding-bottom: 10px;
+    }
+}
+
+.intro__shape-1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -370px;
+    z-index: 1;
+    top: 353px;
+    background: @blue-light;
+    border-radius: 46% 54% 47% 53% / 57% 47% 53% 43% ;
+    opacity: 0.46;
+
+    @media @mobile {
+        left: -520px;
+        top: 203px;
+    }
+
+    @media @mobile-supersm {
+        left: -520px;
+        top: 193px;
+        height: 470px;
+    }
+
+    @media @mobile-micro {
+        left: -550px;
+        top: 193px;
+        height: 420px;
+    }
+}
+
+.intro__shape-2 {
+    position: absolute;
+    height: 475.1px;
+    width: 712px;
+    z-index: 1;
+    left: 81.98%;
+    right: -53.86%;
+    top: 366px;
+    background: @yellow;
+    border-radius: 100%;
+
+    @media @mobile {
+        top: 303px;
+    }
+
+    @media @mobile-supersm {
+        top: 222px;
+        height: 455.1px;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text__headline {
+    text-align: center;
+
+    width: 510px;
+    margin-top: 200px;
+    padding-bottom: 27px;
+
+    font-family: black;
+    font-size: 72px;
+    line-height: 78px;
+    letter-spacing: 0.2px;
+    color: @blue;
+
+    @media @mobile {
+        font-size: 56px;
+        font-family: bold;
+        line-height: 65px;
+        margin-top: 100px;
+    }
+
+    @media @mobile-supersm {
+        font-size: 50px;
+        font-family: bold;
+        line-height: 60px;
+        margin-top: 90px;
+    }
+
+    @media @mobile-micro {
+        font-size: 35px;
+        width: 100%;
+        font-family: bold;
+        line-height: 50px;
+        margin-top: 80px;
+    }
+}
+
+.text__subheadline2 {
+    display: none;
+    text-align: center;
+    margin-bottom: 84px;
+
+    width: 544px;
+
+    font-family: book;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    color: @gray;
+
+    @media @mobile {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    @media @mobile-supersm {
+        font-size: 19px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+
+    @media @mobile-micro {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+
+.text__subheadline {
+    text-align: center;
+    margin-bottom: 84px;
+
+    width: 544px;
+
+    font-family: book;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    color: @gray;
+
+    @media @mobile {
+        display: none;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin: 10px;
+    }
+}
+
+.buttons--intro {
+    @media (max-width: 290px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+.screen {
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+.intro__screen {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,66 @@
+// compress: true
+@import "vars";
+
+@font-face {
+    font-family: "book";
+    src: url(../fonts/CircularStd-Book.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../fonts/CircularStd-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "black";
+    src: url(../fonts/CircularStd-Black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+
+    font-family: nextart;
+
+    font-size: 14px;
+    color: @black;
+    -webkit-font-smoothing: antialiased;
+
+    &.no-scroll {
+        overflow-y: hidden;
+    }
+}
+
+h1, h2, h3, h4, h4, h5 {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/* Blocks ======================*/
+@import "blocks/header.less";
+@import "blocks/container.less";
+@import "blocks/btn.less";
+@import "blocks/intro.less";
+@import "blocks/navigate.less";
+@import "blocks/about.less";
+@import "blocks/subscribe.less";
+@import "blocks/testimonials.less";
+@import "blocks/price.less";
+@import "blocks/meeting.less";
+@import "blocks/footer.less";
+
+@import "helpers";
